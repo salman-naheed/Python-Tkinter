@@ -1,13 +1,15 @@
 from tkinter import *
 root = Tk()
 
-e = Entry(root)
+e = Entry(root, width=50, borderwidth=5 )
 e.pack()
+e.insert(0, 'Enter your name')
 def func ():
-    myLabel = Label(root, text="clicked")
+    hello = "Hello"+e.get()
+    myLabel = Label(root, text=hello)
     myLabel.pack()
 
-myButton = Button(root, text='click me', padx= 50, pady = 20, command=func, bg='#fff', fg='#000')
+myButton = Button(root, text='Enter your name', command=func, bg='#fff', fg='#000')
 myButton.pack()
 
 root.mainloop()
